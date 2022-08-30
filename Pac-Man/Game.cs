@@ -118,7 +118,24 @@ namespace Pac_Man
             {
                 gbGameOver.Hide();
                 gameReset();
-            } 
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                MessageBox messageBox = new MessageBox();
+
+                if (messageBox.ShowDialog() == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    this.ActiveControl = null;
+                }
+            }
+            if (e.KeyCode == Keys.R && (life == 1 || life == 2))
+            {
+                gameReset();
+            }
         }
 
         private void life_index()
@@ -147,6 +164,13 @@ namespace Pac_Man
         private void gameTimer(object sender, EventArgs e)
         {
             lblScore.Text = "Score: " + score;
+
+            if (score > Int32.Parse(Properties.Settings.Default.high_score))
+            {
+                lblValue.Text = score.ToString();
+                Properties.Settings.Default.high_score = lblValue.Text;
+                Properties.Settings.Default.Save();
+            }
 
             if (score == 100)
             {
