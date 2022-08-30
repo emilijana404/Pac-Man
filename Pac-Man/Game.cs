@@ -177,7 +177,11 @@ namespace Pac_Man
                 SoundPlayer audio = new SoundPlayer(Pac_Man.Properties.Resources.pacman_win);
                 audio.Play();
 
-                isGameOver = true;   
+                isGameOver = true;
+
+                lblNew.Show();
+                lblValue.Text = "100";
+                lblValue.Location = new Point(41, 504);
 
                 timer.Stop();
                 gbGameOver.Show();
