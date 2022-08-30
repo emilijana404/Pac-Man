@@ -179,7 +179,6 @@ namespace Pac_Man
 
                 isGameOver = true;
 
-                lblNew.Show();
                 lblValue.Text = "100";
                 lblValue.Location = new Point(41, 504);
 
@@ -375,7 +374,6 @@ namespace Pac_Man
         private void gameReset()
         {
             gbGameOver.Hide();
-            lblNew.Hide();
 
             lblScore.Text = "Score: 0";
             score = 0;
@@ -434,15 +432,6 @@ namespace Pac_Man
             isGameOver = true;
 
             pacman.Visible = true;
-
-            int a = Int32.Parse(lblValue.Text);
-            if (score > a)
-            {
-                lblValue.Text = score.ToString();
-                Properties.Settings.Default.high_score = lblValue.Text;
-                Properties.Settings.Default.Save();
-                lblNew.Show();
-            }
 
             timer.Stop();
             gbGameOver.Show();

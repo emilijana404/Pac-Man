@@ -21,7 +21,7 @@ namespace Pac_Man
 
         static MessageBox newMessageBox;
 
-        public void ShowBox(string txtMessage, string txtDesc)
+        public void ShowBox(string txtMessage)
         {
             newMessageBox = new MessageBox();
             newMessageBox.lblMessage.Text = txtMessage;

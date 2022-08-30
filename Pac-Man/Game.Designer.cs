@@ -115,7 +115,6 @@ namespace Pac_Man
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.orangeGhost = new System.Windows.Forms.PictureBox();
-            this.lblNew = new System.Windows.Forms.Label();
             this.blinkTimer = new System.Windows.Forms.Timer(this.components);
             this.gbGameOver.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacman)).BeginInit();
@@ -1105,17 +1104,6 @@ namespace Pac_Man
             this.orangeGhost.TabStop = false;
             this.orangeGhost.Tag = "ghost";
             // 
-            // lblNew
-            // 
-            this.lblNew.AutoSize = true;
-            this.lblNew.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblNew.Location = new System.Drawing.Point(42, 489);
-            this.lblNew.Name = "lblNew";
-            this.lblNew.Size = new System.Drawing.Size(50, 18);
-            this.lblNew.TabIndex = 112;
-            this.lblNew.Text = "NEW!";
-            // 
             // blinkTimer
             // 
             this.blinkTimer.Interval = 80;
@@ -1126,7 +1114,6 @@ namespace Pac_Man
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.lblNew);
             this.Controls.Add(this.gbGameOver);
             this.Controls.Add(this.orangeGhost);
             this.Controls.Add(this.pinkGhost);
@@ -1375,7 +1362,6 @@ namespace Pac_Man
         private System.Windows.Forms.Label lblHScore;
         private System.Windows.Forms.Label lblWin;
         private System.Windows.Forms.PictureBox orangeGhost;
-        private System.Windows.Forms.Label lblNew;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Timer blinkTimer;
     }

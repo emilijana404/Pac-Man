@@ -180,9 +180,6 @@
     <None Include="Resources\pacman_beginning.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pacman_beginning_double.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pacman_win.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
